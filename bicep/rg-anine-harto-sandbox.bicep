@@ -21,6 +21,9 @@ resource storageAccount 'Microsoft.Storage/storageAccounts@2022-09-01' = {
   }
   kind: 'StorageV2'
   tags: tags
+  properties: {
+    isHnsEnabled: true
+  }
 
   resource blobService 'blobServices' = {
     name: 'default'
