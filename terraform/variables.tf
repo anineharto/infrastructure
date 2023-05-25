@@ -1,5 +1,4 @@
-variable "environment" {
-  description = "The environment to deploy to"
-  type        = string
-  default     = "dev"
+variable "storage_account_name" {
+  description = "The name of the storage account"
+    type        = string
 }

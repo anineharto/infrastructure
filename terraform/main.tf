@@ -19,7 +19,7 @@ data "azurerm_resource_group" "rg" {
 }
 
 resource "azurerm_storage_account" "storage" {
-  name                     = "staninehartosandbox-${var.environment}"
+  name                     = var.storage_account_name
   resource_group_name      = data.azurerm_resource_group.rg.name
   location                 = data.azurerm_resource_group.rg.location
   tags                     = local.azurerm_tags
